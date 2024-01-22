@@ -47,6 +47,7 @@ Run the tests directly from Visual Studio using the Test Explorer:
 ### Additional Notes
 Ensure that the browser and WebDriver are up to date and compatible.
 The tests assume certain initial conditions. Ensure these conditions are met.
+The file "SQLStatmentes.sql" contains the SQL statements required as part of the challenging task.
 
 ## Contributions
 Contributions are welcome. Please follow standard practices for code contributions.
