@@ -50,7 +50,14 @@ namespace SampleCSharpConcept.BasePage
         }
         public void Scroll(string verticalDirection) 
         {
-            ((IJavaScriptExecutor)driver).ExecuteScript($"window.scrollBy(0, {verticalDirection}");
+            ((IJavaScriptExecutor)driver).ExecuteScript($"window.scrollBy(0, {verticalDirection})");
+
+        }
+
+        public void CheckAndCompareCurrentUrl(string desiredUrl)
+        {
+            string currentUrl = driver.Url;
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(desiredUrl, currentUrl, "The current url isn't expected.");
         }
 
 	}

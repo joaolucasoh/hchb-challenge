@@ -22,7 +22,7 @@ namespace SampleCSharpConcept.Pages
 		public static readonly By emailLabel = By.CssSelector("[href='mailto:info@hchb.com'] .elementor-icon-list-text");
 
 
-		public void comparePhoneAndEmail(string phoneCompared, string emailCompared)
+		public void ComparePhoneAndEmail(string phoneCompared, string emailCompared)
 		{
 			IWebElement el = driver.FindElement(phoneLabel);
 			IWebElement elEmail = driver.FindElement(emailLabel);

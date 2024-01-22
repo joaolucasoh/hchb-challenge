@@ -27,14 +27,14 @@ namespace SampleCSharpConcept.Tests
             WaitElement(GoogleHomePage.inputSearch);
 
             // fill the input
-            googlehomePage.fillInputSearch("Selenium HQ");
-            googlehomePage.submitSearch();
-            googlehomePage.fillInputSearch(Keys.Enter);
+            googlehomePage.FillInputSearch("Selenium HQ");
+            googlehomePage.SubmitSearch();
+            googlehomePage.FillInputSearch(Keys.Enter);
 
             WaitElement(GoogleHomePage.inputSearch);
-            googlehomePage.clearInputSearch();
-            googlehomePage.fillInputSearch("HCHB");
-            googlehomePage.fillInputSearch(Keys.Enter);
+            googlehomePage.ClearInputSearch();
+            googlehomePage.FillInputSearch("HCHB");
+            googlehomePage.FillInputSearch(Keys.Enter);
 
             // Verify if hchb.com is on the 2nd row
             WaitElement(By.CssSelector("h3"));
@@ -44,24 +44,22 @@ namespace SampleCSharpConcept.Tests
             // Go through home page and check email and phone
             results[2].Click();
             WaitElement(HCHBHomePage.emailLabel);
-
-            hchbHomePage.comparePhoneAndEmail("866-535-4242", "info@hchb.com");
+            hchbHomePage.ComparePhoneAndEmail("866-535-4242", "info@hchb.com");
             
             //clicking in request demo
             hchbHomePage.ClickRequestDemoButton();
 
             //checking url
-            
+            CheckAndCompareCurrentUrl("https://hchb.com/request-demo/");
             
             // scroll until make the whole form visible
             Scroll("500");
-            // ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollBy(0, 500)");
 
             //fill up the mandatory fields
-            hchbRequestDemoPage.fullOnlyRequiredFields();
+            hchbRequestDemoPage.FullOnlyRequiredFields();
 
             //check the error messages
-            hchbRequestDemoPage.checkErrorsMessages();
+            hchbRequestDemoPage.CheckErrorsMessages();
         }
     }
 }

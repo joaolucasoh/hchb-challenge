@@ -51,9 +51,10 @@ namespace SampleCSharpConcept.Pages
             new SelectElement(driver.FindElement(role)).SelectByText(fillRole);
         }
 
-        public void fullOnlyRequiredFields()
+        public void FullOnlyRequiredFields()
         {
             switchingToIframe(By.ClassName("pardotform"));
+
             driver.FindElement(firstName).Click();
             driver.FindElement(firstName).SendKeys(Faker.Name.First());
             driver.FindElement(lastName).SendKeys(Faker.Name.Last());
@@ -65,7 +66,6 @@ namespace SampleCSharpConcept.Pages
             driver.FindElement(city).SendKeys(Faker.Country.Name());
             selectState("CT");
             Scroll("600");
-            // ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollBy(0, 600)");
             selectCensus("501 - 1,000");
             Scroll("600");
             driver.FindElement(submitButton).Click();
@@ -73,12 +73,11 @@ namespace SampleCSharpConcept.Pages
             driver.SwitchTo().DefaultContent();
         }
 
-        public void checkErrorsMessages()
+        public void CheckErrorsMessages()
         {
             switchingToIframe(By.ClassName("pardotform"));
             //a. Please correct the errors below: header is displayed on top.
             Scroll("-600");
-            ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollBy(0, -600)");
             string topErrorMsg = driver.FindElement(By.ClassName("errors")).Text;
             Assert.AreEqual(topErrorMsg, "Please correct the errors below:");
             

@@ -20,17 +20,17 @@ namespace SampleCSharpConcept.Page
 		public static readonly By inputSearch = By.TagName("textarea");
 		public static readonly By submitButton = By.XPath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[1]");
 
-		public void fillInputSearch(string text)
+		public void FillInputSearch(string text)
 		{
 			driver.FindElement(inputSearch).SendKeys(text);
 		}
 
-		public void clearInputSearch()
+		public void ClearInputSearch()
 		{
 			driver.FindElement(inputSearch).Clear();
 		}
 
-		public void submitSearch()
+		public void SubmitSearch()
 		{
 			driver.FindElement(submitButton).Click();
 		}
