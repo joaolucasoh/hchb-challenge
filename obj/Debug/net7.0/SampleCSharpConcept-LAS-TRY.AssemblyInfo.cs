@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SampleCSharpConcept-LAS-TRY")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee80696287bf6de0651c9d4a3572d0b7f600183f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02cf7e470a68e4d4c0aa70e954106c5ce3d0d101")]
 [assembly: System.Reflection.AssemblyProductAttribute("SampleCSharpConcept-LAS-TRY")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SampleCSharpConcept-LAS-TRY")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
